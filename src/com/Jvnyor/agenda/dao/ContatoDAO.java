@@ -18,7 +18,7 @@ public class ContatoDAO {
 		 * na base de dados
 		 */
 		
-		String sql = "INSERT INTO contatos(nome,idade,dataCadastro)"+" VALUES(?,?,?)";
+		String sql = "INSERT INTO contatos(nome,idade,data_cadastro)"+" VALUES(?,?,?)";
 		
 		Connection conn = null;
 		PreparedStatement pstm = null;
@@ -91,7 +91,7 @@ public class ContatoDAO {
 	
 	public void update(Contato contato) {
 		
-		String sql = "UPDATE contatos SET nome = ?, idade = ?, dataCadastro = ?" +
+		String sql = "UPDATE contatos SET nome = ?, idade = ?, data_cadastro = ?" +
 				 " WHERE id = ?";
 		
 		Connection conn = null;
@@ -167,7 +167,7 @@ public class ContatoDAO {
 			contato.setIdade(rset.getInt("idade"));
 			 
 			//Recupera a data do banco e atribui ela ao objeto
-			contato.setDataCadastro(rset.getDate("dataCadastro"));
+			contato.setDataCadastro(rset.getDate("data_cadastro"));
 			 
 			//Adiciono o contato recuperado, a lista de contatos
 			contatos.add(contato);

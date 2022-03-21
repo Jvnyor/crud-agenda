@@ -39,7 +39,7 @@ public class ConnectionFactory {
 		
 		//Testa se a conex„o È nula
 		if (con != null) {
-			System.out.println("Conex√£o obtida com sucesso! "+con);
+			System.out.println("Conex„o obtida com sucesso! "+con);
 			con.close();
 		}
 	}
